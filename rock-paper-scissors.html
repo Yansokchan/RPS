@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pav Sing Sum</title>
+    <link rel="stylesheet" href="rock-paper-scissors.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <div class="rock-paper-scissors">
+      <button class="rock rock-btn">
+        <img src="rock-emoji.png" />
+      </button>
+      <button class="rock paper-btn">
+        <img src="paper-emoji.png" />
+      </button>
+      <button class="rock scissors-btn">
+        <img src="scissors-emoji.png" />
+      </button>
+    </div>
+    <p class="js-result result-show"></p>
+    <p class="js-move"></p>
+    <p class="js-score score-show"></p>
+    <div class="reset">
+      <button
+        class="reset-button"
+        onclick="
+            score.win=0;
+            score.lose=0;
+            score.tie=0;
+            localStorage.removeItem('score');
+            updateScoreElement();
+        "
+      >
+        Reset score
+      </button>
+      <button
+        class="auto-play"
+        onclick="
+            autoPlay();
+        "
+      >
+        Auto Play
+      </button>
+    </div>
+
+    <script src="rock-paper-scissors.js"></script>
+  </body>
+</html>
